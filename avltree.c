@@ -8,8 +8,8 @@ SENT *create_trees(void){
 
     trees = (SENT *) malloc(sizeof(SENT));
     trees->cpf_tree = (TREE *) calloc (1, sizeof(TREE));
-    trees->nome_tree = (TREE *) calloc (1, sizeof(TREE));
-    trees->data_tree = (TREE *) calloc (1, sizeof(TREE));
+    trees->name_tree = (TREE *) calloc (1, sizeof(TREE));
+    trees->date_tree = (TREE *) calloc (1, sizeof(TREE));
 
     trees->size = 0;
     return trees;
@@ -17,7 +17,7 @@ SENT *create_trees(void){
 
 void add_elem(SENT *trees, REG *elem){
     void add_elem_cpf_tree(trees->cpf_tree , elem);
-    void add_elem_data_tree(trees->nome_tree, elem);
-    void add_elem_nome_tree(trees->data_tree, elem);
+    void add_elem_date_tree(trees->name_tree, elem);
+    void add_elem_name_tree(trees->date_tree, elem);
     trees->size++;
 }

@@ -3,10 +3,14 @@
 
 // Definindo TADs
 
-typedef struct registro{ // TAD para armazenar informacoes pessoais
-    int cpf, RG;
-    int **data;
-    char *nome, *cidade;
+typedef struct date{
+    int year,month,day;
+} DATE;
+
+typedef struct registry{ // TAD para armazenar informacoes pessoais
+    int CPF, RG;
+    DATE *date;
+    char *name, *city;
 } REG;
 
 typedef struct node{ // TAD para um no de uma arvore
@@ -20,7 +24,7 @@ typedef struct avl_tree{ // TAD para uma arvore AVL
 } TREE;
 
 typedef struct sentinel{
-    TREE *cpf_tree, *data_tree, *nome_tree;
+    TREE *cpf_tree, *data_tree, *name_tree;
     int size;
 } SENT;
 
@@ -32,8 +36,8 @@ SENT *create_trees(void);
 // Funcoes de inclusao de elementos
 void add_elem(SENT *, REG *);
 void add_elem_cpf_tree(TREE *, REG *);
-void add_elem_data_tree(TREE *, REG *);
-void add_elem_nome_tree(TREE *, REG *);
+void add_elem_date_tree(TREE *, REG *);
+void add_elem_name_tree(TREE *, REG *);
 
 // Funcao para atualizacao de indices
     // Recalcula o indice de cada no
