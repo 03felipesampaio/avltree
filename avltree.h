@@ -38,6 +38,7 @@ void add_elem(SENT *, REG *);
 void add_elem_cpf_tree(TREE *, REG *);
 void add_elem_date_tree(TREE *, REG *);
 void add_elem_name_tree(TREE *, REG *);
+NODE *create_node(REG * );
 
 // Funcao para atualizacao de indices
     // Recalcula o indice de cada no
